@@ -1,6 +1,6 @@
 {
   "name": "@a13y/devtools",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "type": "module",
   "description": "Development-time validators and runtime checks for @a13y (tree-shakeable)",
   "license": "MIT",
@@ -71,7 +71,7 @@
     "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {
-    "@a13y/core": "^0.1.3"
+    "@a13y/core": "^0.1.4"
   },
   "engines": {
     "node": ">=18.0.0"
