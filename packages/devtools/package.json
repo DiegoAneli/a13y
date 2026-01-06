@@ -1,0 +1,88 @@
+{
+  "name": "@a13y/devtools",
+  "version": "0.1.3",
+  "type": "module",
+  "description": "Development-time validators and runtime checks for @a13y (tree-shakeable)",
+  "license": "MIT",
+  "author": {
+    "name": "Diego Aneli",
+    "url": "https://github.com/DiegoAneli"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DiegoAneli/a13y.git",
+    "directory": "packages/devtools"
+  },
+  "bugs": {
+    "url": "https://github.com/DiegoAneli/a13y/issues"
+  },
+  "homepage": "https://github.com/DiegoAneli/a13y#readme",
+  "keywords": [
+    "accessibility",
+    "a11y",
+    "devtools",
+    "validators",
+    "testing",
+    "development",
+    "typescript"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./runtime": {
+      "types": "./dist/runtime/index.d.ts",
+      "import": "./dist/runtime/index.js",
+      "default": "./dist/runtime/index.js"
+    },
+    "./runtime/invariants": {
+      "types": "./dist/runtime/invariants/index.d.ts",
+      "import": "./dist/runtime/invariants/index.js",
+      "default": "./dist/runtime/invariants/index.js"
+    },
+    "./runtime/validators": {
+      "types": "./dist/runtime/validators/index.d.ts",
+      "import": "./dist/runtime/validators/index.js",
+      "default": "./dist/runtime/validators/index.js"
+    },
+    "./runtime/warnings": {
+      "types": "./dist/runtime/warnings/index.d.ts",
+      "import": "./dist/runtime/warnings/index.js",
+      "default": "./dist/runtime/warnings/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm build"
+  },
+  "peerDependencies": {
+    "@a13y/core": "^0.1.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@a13y/core": "workspace:*",
+    "@types/node": "^25.0.3",
+    "tsup": "^8.5.1",
+    "vitest": "^4.0.16"
+  }
+}

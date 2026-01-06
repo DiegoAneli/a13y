@@ -1,0 +1,109 @@
+{
+  "name": "@a13y/core",
+  "version": "0.1.3",
+  "type": "module",
+  "description": "Runtime-enforced accessibility primitives for TypeScript",
+  "license": "MIT",
+  "author": {
+    "name": "Diego Aneli",
+    "url": "https://github.com/DiegoAneli"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DiegoAneli/a13y.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/DiegoAneli/a13y/issues"
+  },
+  "homepage": "https://github.com/DiegoAneli/a13y#readme",
+  "keywords": [
+    "accessibility",
+    "a11y",
+    "wcag",
+    "aria",
+    "focus-management",
+    "keyboard-navigation",
+    "screen-reader",
+    "typescript",
+    "type-safe"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    },
+    "./runtime": {
+      "types": "./dist/runtime/index.d.ts",
+      "import": "./dist/runtime/index.js",
+      "require": "./dist/runtime/index.cjs",
+      "default": "./dist/runtime/index.js"
+    },
+    "./runtime/focus": {
+      "types": "./dist/runtime/focus/index.d.ts",
+      "import": "./dist/runtime/focus/index.js",
+      "require": "./dist/runtime/focus/index.cjs",
+      "default": "./dist/runtime/focus/index.js"
+    },
+    "./runtime/keyboard": {
+      "types": "./dist/runtime/keyboard/index.d.ts",
+      "import": "./dist/runtime/keyboard/index.js",
+      "require": "./dist/runtime/keyboard/index.cjs",
+      "default": "./dist/runtime/keyboard/index.js"
+    },
+    "./runtime/aria": {
+      "types": "./dist/runtime/aria/index.d.ts",
+      "import": "./dist/runtime/aria/index.js",
+      "require": "./dist/runtime/aria/index.cjs",
+      "default": "./dist/runtime/aria/index.js"
+    },
+    "./runtime/announce": {
+      "types": "./dist/runtime/announce/index.d.ts",
+      "import": "./dist/runtime/announce/index.js",
+      "require": "./dist/runtime/announce/index.cjs",
+      "default": "./dist/runtime/announce/index.js"
+    },
+    "./runtime/env": {
+      "types": "./dist/runtime/env/index.d.ts",
+      "import": "./dist/runtime/env/index.js",
+      "require": "./dist/runtime/env/index.cjs",
+      "default": "./dist/runtime/env/index.js"
+    },
+    "./runtime/errors": {
+      "types": "./dist/runtime/errors/index.d.ts",
+      "import": "./dist/runtime/errors/index.js",
+      "require": "./dist/runtime/errors/index.cjs",
+      "default": "./dist/runtime/errors/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm build"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "tsup": "^8.5.1",
+    "vitest": "^4.0.16"
+  }
+}
